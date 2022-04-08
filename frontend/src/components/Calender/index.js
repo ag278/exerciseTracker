@@ -7,6 +7,8 @@ import Snackbar from '@material-ui/core/Snackbar';
 
 import CalendarBody from './CalenderBody';
 import CalendarHead from './CalenderHead';
+import UserProfileCard from '../userProfileCard';
+import UserActivityDisplay from '../UserActivityDisplay';
 
 function Calendar(props) {
   var date = new Date();
@@ -107,6 +109,23 @@ function Calendar(props) {
           ClickselectedDay={ClickselectedDay}
           weekdays={moment.weekdays()}
           //activeDays={activeDays}
+        />
+      </Grid>
+      <Grid item xs={12} md={4} lg={3}>
+        <Paper
+          className="paper"
+          style={{
+            backgroundImage:
+              'linear-gradient(180deg, #d0f6f7 0%, #ef5dd9 100%)',
+          }}
+        >
+          <UserProfileCard />
+        </Paper>
+      </Grid>
+      <Grid item xs={12} md={7}>
+        <UserActivityDisplay
+          setClickSelectedDay={setClickSelectedDay}
+          ClickselectedDay={ClickselectedDay}
         />
       </Grid>
     </Grid>

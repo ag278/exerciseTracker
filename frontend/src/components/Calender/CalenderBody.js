@@ -23,7 +23,7 @@ function CalenderBody(props) {
     actualMonthInName,
     weekdays,
   } = props;
-  console.log(ClickselectedDay);
+  //console.log(ClickselectedDay);
   //console.log(currentMonth);
   let blanks = [];
   for (let i = 0; i < firstDayOfMonthInNum(); i++) {

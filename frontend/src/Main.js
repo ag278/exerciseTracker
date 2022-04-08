@@ -157,6 +157,7 @@ class MiniDrawer extends React.Component {
               Mini variant menu++
             </Typography>
             <div>
+              your name
               <IconButton
                 aria-owns={open ? 'menu-appbar' : undefined}
                 aria-haspopup="true"
