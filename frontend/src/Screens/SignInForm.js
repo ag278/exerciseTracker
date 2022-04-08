@@ -8,6 +8,7 @@ import {
   InstagramLoginButton,
 } from 'react-social-login-buttons';
 import { getError } from '../utils';
+import SignPage from '../components/SignPage';
 
 function SignInForm() {
   const navigate = useNavigate();
@@ -32,59 +33,65 @@ function SignInForm() {
   };
 
   return (
-    <div className="formCenter">
-      <form className="formFields">
-        <div className="formField">
-          <label className="formFieldLabel" htmlFor="email">
-            E-Mail Address
-          </label>
-          <input
-            type="email"
-            id="email"
-            className="formFieldInput"
-            placeholder="Enter your email"
-            name="email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
+    <div className="App">
+      <div className="appAside"></div>
+      <div className="appForm">
+        <SignPage />
+        <div className="formCenter">
+          <form className="formFields">
+            <div className="formField">
+              <label className="formFieldLabel" htmlFor="email">
+                E-Mail Address
+              </label>
+              <input
+                type="email"
+                id="email"
+                className="formFieldInput"
+                placeholder="Enter your email"
+                name="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
 
-        <div className="formField">
-          <label className="formFieldLabel" htmlFor="password">
-            Password
-          </label>
-          <input
-            type="password"
-            id="password"
-            className="formFieldInput"
-            placeholder="Enter your password"
-            name="password"
-            required
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
+            <div className="formField">
+              <label className="formFieldLabel" htmlFor="password">
+                Password
+              </label>
+              <input
+                type="password"
+                id="password"
+                className="formFieldInput"
+                placeholder="Enter your password"
+                name="password"
+                required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
 
-        <div className="formField">
-          <button className="formFieldButton" onClick={handleSubmit}>
-            Sign In
-          </button>{' '}
-          <Link to="/" className="formFieldLink">
-            Create an account
-          </Link>
-        </div>
+            <div className="formField">
+              <button className="formFieldButton" onClick={handleSubmit}>
+                Sign In
+              </button>{' '}
+              <Link to="/" className="formFieldLink">
+                Create an account
+              </Link>
+            </div>
 
-        <div className="socialMediaButtons">
-          <div className="facebookButton">
-            <FacebookLoginButton onClick={() => alert('Hello')} />
-          </div>
+            <div className="socialMediaButtons">
+              <div className="facebookButton">
+                <FacebookLoginButton onClick={() => alert('Hello')} />
+              </div>
 
-          <div className="instagramButton">
-            <InstagramLoginButton onClick={() => alert('Hello')} />
-          </div>
+              <div className="instagramButton">
+                <InstagramLoginButton onClick={() => alert('Hello')} />
+              </div>
+            </div>
+          </form>
         </div>
-      </form>
+      </div>
     </div>
   );
 }
