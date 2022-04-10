@@ -1,14 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap");
+
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Raleway", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 
 * {
   box-sizing: border-box;
@@ -210,4 +209,10 @@ main {
   background-image: url("../public/images/userProfle.png");
   max-width: 100%;
   height: auto;
+}
+
+/* card */
+.carda{
+  margin-bottom: 10px;
+  background-color: blue;
 }

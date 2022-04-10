@@ -20,6 +20,8 @@ import MailIcon from '@material-ui/icons/Mail';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import Index from './components/Calender/index.js';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './Screens/Home.js';
 const drawerWidth = 220;
 
 const styles = (theme) => ({
@@ -225,8 +227,9 @@ class MiniDrawer extends React.Component {
         </Drawer>
         <main className={classes.content}>
           <div className={classes.toolbar} />
-          <Index />
-          <Typography paragraph>
+
+          <Home />
+          {/* <Typography paragraph>
             Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
             ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar
             elementum integer enim neque volutpat ac tincidunt. Ornare
@@ -241,7 +244,7 @@ class MiniDrawer extends React.Component {
             accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam
             ultrices sagittis orci a.
           </Typography>
-          <Typography paragraph>foo</Typography>
+          <Typography paragraph>foo</Typography> */}
         </main>
       </div>
     );

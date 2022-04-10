@@ -16,10 +16,11 @@ function App() {
     <BrowserRouter>
       <div>
         <CssBaseline />
-        <Main />
+
         <Routes>
-          <Route path="/sign-up" element={<SignUpForm />} />
-          <Route path="/sign-in" element={<SignInForm />} />
+          <Route exact path="/sign-up" element={<SignUpForm />} />
+          <Route exact path="/sign-in" element={<SignInForm />} />
+          <Route exact path="/profile" element={<Main />} />
         </Routes>
       </div>
     </BrowserRouter>
