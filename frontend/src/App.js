@@ -10,6 +10,7 @@ import SignUpForm from './Screens/SignUpForm';
 import SignInForm from './Screens/SignInForm';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Main from './Main';
+import Profile from './Screens/Profile';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         <Routes>
           <Route exact path="/sign-up" element={<SignUpForm />} />
           <Route exact path="/sign-in" element={<SignInForm />} />
-          <Route exact path="/profile" element={<Main />} />
+          <Route path="/" element={<Main />} />
         </Routes>
       </div>
     </BrowserRouter>

@@ -22,6 +22,8 @@ import Menu from '@material-ui/core/Menu';
 import Index from './components/Calender/index.js';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Screens/Home.js';
+import { useLocation } from 'react-router-dom';
+
 const drawerWidth = 220;
 
 const styles = (theme) => ({
@@ -122,6 +124,8 @@ class MiniDrawer extends React.Component {
   };
 
   render() {
+    const pathname = window.location.pathname;
+    console.log(pathname);
     const { classes, theme } = this.props;
     const { anchorEl } = this.state;
     const open = Boolean(anchorEl);
@@ -228,7 +232,8 @@ class MiniDrawer extends React.Component {
         <main className={classes.content}>
           <div className={classes.toolbar} />
 
-          <Home />
+          {window.location.pathname === '/profile' ? <Index /> : <Home />}
+          {/* <Index /> */}
           {/* <Typography paragraph>
             Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
             ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar
